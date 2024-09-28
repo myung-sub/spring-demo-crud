@@ -1,6 +1,7 @@
-package com.fxsong.demo.crud.repository;
+package com.fxsong.demo.crud.member;
 
-import com.fxsong.demo.crud.model.Member;
+import com.fxsong.demo.crud.member.Member;
+import com.fxsong.demo.crud.member.MemberRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
@@ -23,8 +24,10 @@ class MemberRepositoryTest {
 
     @Test
     void save() {
-        Member member = new Member();
-        member.setName("asdf");
+        Member member = Member.builder()
+                .name("asdf")
+                .build();
+
         repository.save(member);
         assertEquals(1, repository.findByName("asdf").size());
     }

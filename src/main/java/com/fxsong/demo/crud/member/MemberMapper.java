@@ -1,6 +1,5 @@
-package com.fxsong.demo.crud.mapper;
+package com.fxsong.demo.crud.member;
 
-import com.fxsong.demo.crud.model.Member;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

@@ -1,6 +1,6 @@
-package com.fxsong.demo.crud.repository;
+package com.fxsong.demo.crud.member;
 
-import com.fxsong.demo.crud.model.Member;
+import com.fxsong.demo.crud.member.Member;
 import org.springframework.data.repository.ListCrudRepository;
 
 import java.util.List;

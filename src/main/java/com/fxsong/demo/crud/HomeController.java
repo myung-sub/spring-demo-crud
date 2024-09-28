@@ -1,4 +1,4 @@
-package com.fxsong.demo.crud.controller;
+package com.fxsong.demo.crud;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

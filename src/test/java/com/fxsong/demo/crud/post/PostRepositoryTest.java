@@ -1,5 +1,6 @@
-package com.fxsong.demo.crud.repository;
+package com.fxsong.demo.crud.post;
 
+import com.fxsong.demo.crud.post.PostRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
@@ -19,7 +20,7 @@ class PostRepositoryTest {
 
     @Test
     void findById() {
-        Integer id = 1;
+        Long id = 1L;
         assertEquals(id, repository.findById(id).get().getId());
     }
 

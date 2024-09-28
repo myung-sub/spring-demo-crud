@@ -1,6 +1,6 @@
 package com.fxsong.demo.crud;
 
-import com.fxsong.demo.crud.repository.MemberRepository;
+import com.fxsong.demo.crud.member.MemberRepository;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

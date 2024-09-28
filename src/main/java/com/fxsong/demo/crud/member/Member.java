@@ -1,15 +1,15 @@
-package com.fxsong.demo.crud.model;
+package com.fxsong.demo.crud.member;
 
+import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
-@Table("TB_POST")
+@Table("TB_MEMBER")
 @Data
-public class Post {
+@Builder
+public class Member {
     @Id
     private Integer id;
-    private Integer memberId;
-    private String title;
-    private String body;
+    private String name;
 }
