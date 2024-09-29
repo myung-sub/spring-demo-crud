@@ -10,6 +10,6 @@ import org.springframework.data.relational.core.mapping.Table;
 @Builder
 public class Member {
     @Id
-    private Integer id;
+    private Long id;
     private String name;
 }

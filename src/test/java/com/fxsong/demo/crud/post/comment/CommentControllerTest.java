@@ -1,12 +1,10 @@
-package com.fxsong.demo.crud.post;
+package com.fxsong.demo.crud.post.comment;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -16,37 +14,26 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class PostControllerTest {
+class CommentControllerTest {
 
     @Autowired
     MockMvc mvc;
 
-    @Autowired
-    ObjectMapper objectMapper;
-
     @Test
     void list() throws Exception {
+        // given
+        Long postId = 1L;
+        String url = String.format("/api/posts/%d/comments", postId);
+
         mvc
                 // when
-                .perform(get("/api/posts"))
-
-                // then
-                .andExpect(status().isOk())
-                .andDo(print())
-        ;
-    }
-
-    @Test
-    void findOne() throws Exception {
-        Long id = 1L;
-        mvc
-                // when
-                .perform(get("/api/posts/" + id))
+                .perform(get(String.format("/api/posts/%d/comments", postId)))
 
                 // then
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").value(id))
         ;
+
     }
+
 }

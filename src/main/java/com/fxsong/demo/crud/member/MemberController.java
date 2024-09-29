@@ -8,11 +8,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/members")
-public class MemberController extends CrudController<Member, Integer> {
+public class MemberController extends CrudController<Member, Long> {
 
     private final MemberMapper mapper;
 
-    public MemberController(CrudService<Member, Integer> service, MemberMapper mapper) {
+    public MemberController(CrudService<Member, Long> service, MemberMapper mapper) {
         super(service);
         this.mapper = mapper;
     }

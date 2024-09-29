@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
-public class MemberService extends CrudServiceImpl<Member, Integer> {
+public class MemberService extends CrudServiceImpl<Member, Long> {
 
     public MemberService(MemberRepository repo) {
         super(repo);

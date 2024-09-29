@@ -34,7 +34,7 @@ class MemberRepositoryTest {
 
     @Test
     void delete() {
-        Integer id = 1;
+        Long id = 1L;
         repository.deleteById(id);
         Optional<Member> member = repository.findById(id);
         assertFalse(member.isPresent());
@@ -42,7 +42,7 @@ class MemberRepositoryTest {
 
     @Test
     void update() {
-        Integer id = 1;
+        Long id = 1L;
         Member member = repository.findById(id).get();
         member.setName("new name");
         repository.save(member);
