@@ -4,10 +4,11 @@ import com.fxsong.demo.crud.post.PostRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@DataJdbcTest
+@SpringBootTest
 class PostRepositoryTest {
 
     @Autowired

@@ -1,14 +1,13 @@
 package com.fxsong.demo.crud.post.comment;
 
-import com.fxsong.demo.crud.base.CamelMap;
-import com.fxsong.demo.crud.base.CrudController;
+import com.fxsong.demo.crud.system.CamelMap;
+import com.fxsong.demo.crud.system.CrudController;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api/posts/{postId}/comments")

@@ -1,10 +1,10 @@
-package com.fxsong.demo.crud.base;
+package com.fxsong.demo.crud.system;
 
 import org.springframework.data.repository.CrudRepository;
 
 public class CrudServiceImpl<T, ID> implements CrudService<T, ID> {
 
-    private final CrudRepository<T, ID> repo;
+    protected final CrudRepository<T, ID> repo;
 
     public CrudServiceImpl(CrudRepository<T, ID> repo) {
         this.repo = repo;
@@ -26,7 +26,7 @@ public class CrudServiceImpl<T, ID> implements CrudService<T, ID> {
     }
 
     @Override
-    public T findOne(ID id) {
+    public T findById(ID id) {
         return repo.findById(id).orElse(null);
     }
 

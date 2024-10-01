@@ -1,4 +1,4 @@
-package com.fxsong.demo.crud.base;
+package com.fxsong.demo.crud.system;
 
 import java.io.Serial;
 import java.util.LinkedHashMap;

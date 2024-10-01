@@ -1,4 +1,4 @@
-package com.fxsong.demo.crud.base;
+package com.fxsong.demo.crud.system;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +17,7 @@ public abstract class CrudController<T, ID> {
 
     @GetMapping("{id}")
     public T findOne(@PathVariable ID id) {
-        return service.findOne(id);
+        return service.findById(id);
     }
 
     @PutMapping("{id}")

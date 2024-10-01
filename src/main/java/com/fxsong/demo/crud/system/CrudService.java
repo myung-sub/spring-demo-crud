@@ -1,6 +1,4 @@
-package com.fxsong.demo.crud.base;
-
-import java.util.List;
+package com.fxsong.demo.crud.system;
 
 public interface CrudService<T, ID> {
     T create(T entity);
@@ -9,6 +7,6 @@ public interface CrudService<T, ID> {
 
     void remove(ID id);
 
-    T findOne(ID id);
+    T findById(ID id);
 
 }

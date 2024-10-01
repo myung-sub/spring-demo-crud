@@ -1,6 +1,6 @@
 package com.fxsong.demo.crud.post;
 
-import com.fxsong.demo.crud.base.CrudController;
+import com.fxsong.demo.crud.system.CrudController;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
